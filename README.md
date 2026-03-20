@@ -441,10 +441,6 @@ MIT License — Open source parametric insurance for social impact.
 4. View live triggers on dashboard
 5. Test claim simulation
 
-**Contact & Support**:
-- 📧 E-mail: support@samvid-insurai.com
-- 📱 WhatsApp: +91-9876543210
-- 🐦 Twitter: @samvid_insurai
 
 ---
 
