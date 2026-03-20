@@ -420,9 +420,7 @@ npm run test    # Jest unit tests (coming Phase 2)
 ## 🤝 Contributors
 
 **Team**: Code_Wrappers  
-**Phase 1 Lead**: [Your Name]  
-**Designer**: [Your Name]  
-**Backend**: [Your Name]
+**Phase 1 Lead**: Shahnoor Ahmed Laskar
 
 ---
 
