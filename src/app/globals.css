@@ -17,6 +17,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -52,6 +53,24 @@ h3 {
   animation: pulseText 2.2s ease-in-out infinite;
 }
 
+.shimmer-surface {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.08) 25%, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0.08) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.1s linear infinite;
+}
+
+.glow-border {
+  box-shadow: 0 0 0 1px rgba(251, 146, 60, 0.3), 0 12px 35px rgba(251, 146, 60, 0.2);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.floating-blob {
+  filter: blur(48px);
+  opacity: 0.45;
+  animation: float 16s ease-in-out infinite;
+}
+
+/* Enhanced animations for SAMVID theme */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -82,4 +101,162 @@ h3 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Premium insurance theme animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(255, 144, 77, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 144, 77, 0.8);
+  }
+}
+
+@keyframes shieldPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes gridGradient {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 144, 77, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(255, 144, 77, 0.4));
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility animations */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    transparent 100%
+  );
+  background-position: -1000px 0;
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shield {
+  animation: shieldPulse 3s ease-in-out infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.delay-2000 {
+  animation-delay: 2000ms;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+[role="button"] {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
