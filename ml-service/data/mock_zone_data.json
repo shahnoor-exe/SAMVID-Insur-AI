@@ -1,0 +1,7 @@
+[
+  { "city": "Mumbai", "pincode": "400001", "risk_score": 0.61 },
+  { "city": "Delhi", "pincode": "110001", "risk_score": 0.72 },
+  { "city": "Bengaluru", "pincode": "560001", "risk_score": 0.49 },
+  { "city": "Chennai", "pincode": "600001", "risk_score": 0.64 },
+  { "city": "Pune", "pincode": "411001", "risk_score": 0.46 }
+]

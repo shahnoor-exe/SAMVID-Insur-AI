@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #051019;
+  --foreground: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-space-grotesk);
+  --font-display: var(--font-sora);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-sora), sans-serif;
+}
+
+.hero-mesh {
+  background:
+    linear-gradient(115deg, #061520 0%, #0f172a 42%, #102c2e 100%),
+    linear-gradient(45deg, rgba(251, 146, 60, 0.18), transparent 58%),
+    radial-gradient(circle at 25% 35%, rgba(45, 212, 191, 0.2), transparent 42%);
+}
+
+.fade-in {
+  animation: fadeIn 0.65s ease both;
+}
+
+.slide-up {
+  animation: slideUp 0.72s ease both;
+}
+
+.slide-up-delay {
+  animation: slideUp 0.82s ease 0.12s both;
+}
+
+.slide-up-delay-2 {
+  animation: slideUp 0.9s ease 0.2s both;
+}
+
+.ticker {
+  animation: pulseText 2.2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseText {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateY(1px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
